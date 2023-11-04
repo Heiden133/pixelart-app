@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pixelArt</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <h1>pixelArt</h1>
+    <div class="header d-flex flex-row align-items-center justify-content-around" id="header">
+        <h5>Select the size</h5>
+        <button class="btn btn-danger" id="size-button">Select</button>       
+    </div>
+    <div class="mode">Coloring</div>
+    <div class="paint"></div>
+    <div class="board"></div>
+    <div class="d-flex flex-row align-items-center justify-content-between" id="buttons">      
+        <button class="btn btn-warning" id="random-color" onclick="changeColor('random')">Random</button>
+        <button class="btn btn-warning" onclick="changeColor('eraser')">Eraser</button>
+        <button class="btn btn-primary" id="reset" onclick="clearGrid()">Reset</button>
+    </div>
+    <div class="own-color">
+        <button class="btn btn-outline-primary" id="color-mode" onclick="changeColor('color')">Color mode</button>
+        <input id="color-picker" type="color" value="#333333" />
+        <label for="color-picker">Choose your color</label>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
